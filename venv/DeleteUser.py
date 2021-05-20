@@ -17,7 +17,7 @@ def delU():
     # error message if unable to delete book
     try:
         args = [user_id]
-        cur.callproc('DeleteBookByID', args)
+        cur.callproc('DeleteUserByID', args)
         con.commit()
         messagebox.showinfo('Success', "User Record Deleted Successfully")
     except:
