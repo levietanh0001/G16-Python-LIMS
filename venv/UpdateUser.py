@@ -36,7 +36,7 @@ def updateUser():
     global userID, userName, DOB, phoneNum, emailAddr
 
     root = Tk()
-    root.title("Add Book")
+    root.title("Update User")
     root.minsize(width=100, height=500)
     root.geometry("500x309")
 

@@ -61,8 +61,6 @@ INSERT INTO books values
 ('B010', 'Sherlock Holmes', 'Au1', '1' )
 ;
 
-
-
 INSERT INTO users values
 ('U01', 'Alex', '2001-12-03', '0980113114', 'alex@gmail.com'),
 ('U02', 'Peter', '2000-11-04', '0363646423', 'peter@gmail.com'),
@@ -194,6 +192,7 @@ BEGIN
     
     DELETE FROM lent_books WHERE book_id = newBookID AND user_id = newUserID;
 END //
+delimiter ;
 delimiter ;
 
 -- https://www.mysqltutorial.org/mysql-delete-join/
