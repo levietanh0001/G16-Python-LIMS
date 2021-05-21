@@ -25,7 +25,7 @@ Group Project: Library Information Management System (#13)
 
   <tr>
   	<td> Vu Tuan Phuong Nam </td>
-  	<td> Debug, quality control, UML </td>
+  	<td> Debug, code quality control, UML </td>
   </tr>
 
   <tr>
