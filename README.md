@@ -15,7 +15,7 @@ Group Project: Library Information Management System (#13)
 
   <tr>
   	<td> Le Viet Anh </td>
-  	<td> Code, demonstrate </td>
+  	<td> Code python, update database, demonstrate </td>
   </tr>
   
   <tr>
@@ -25,7 +25,7 @@ Group Project: Library Information Management System (#13)
 
   <tr>
   	<td> Vu Tuan Phuong Nam </td>
-  	<td> Debug, code quality control, UML </td>
+  	<td> Debug python, code quality control, UML </td>
   </tr>
 
   <tr>
