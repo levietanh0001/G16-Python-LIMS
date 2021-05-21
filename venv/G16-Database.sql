@@ -4,7 +4,7 @@ use g16_db;
 
 create table users(
 	user_id varchar(10) primary key, 
-	user_name varchar(30),
+	user_name varchar(50),
     dob varchar(20),
 	phone_num varchar(20), 
 	email varchar(30)
@@ -19,7 +19,7 @@ create table books(
 
 create table authors(
 	author_id varchar(10) primary key, 
-    author_name varchar(30) 
+    author_name varchar(50) 
 );
 
 create table lent_books(
@@ -60,6 +60,8 @@ INSERT INTO books values
 ('B09', 'Truyen Kieu', 'Au3', '3' ),
 ('B010', 'Sherlock Holmes', 'Au1', '1' )
 ;
+
+
 
 INSERT INTO users values
 ('U01', 'Alex', '2001-12-03', '0980113114', 'alex@gmail.com'),
@@ -171,7 +173,6 @@ delimiter //
 CREATE PROCEDURE LendBook(IN newBookID varchar(10), newLentCopies int, newUserID varchar(10),  newBorrowedDate varchar(20), newDeadline varchar(20) )
 BEGIN
     INSERT INTO lent_books values (newBookID, newLentCopies, newUserID,  newBorrowedDate, newDeadline);
-    
     UPDATE books
     SET available_copies = available_copies - newLentCopies
     WHERE book_id = newBookID;
@@ -193,11 +194,37 @@ BEGIN
     DELETE FROM lent_books WHERE book_id = newBookID AND user_id = newUserID;
 END //
 delimiter ;
+
+-- find which user borrows which book
+delimiter //
+CREATE PROCEDURE FindBorrowerByName(in b_name varchar(50)) 
+begin
+    select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
+    from users inner join lent_books 
+    on (users.user_id=lent_books.user_id and users.user_name=b_name)
+    join books 
+    on (lent_books.book_id=books.book_id)
+    ;
+end //
 delimiter ;
 
+-- show all borrowers
+delimiter //
+CREATE PROCEDURE ShowAllBorrowers() 
+begin
+    select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
+    from users inner join lent_books 
+    on (users.user_id=lent_books.user_id)
+    join books 
+    on (lent_books.book_id=books.book_id)
+    ;
+end //
+delimiter ;
+
+-- call FindBorrowerByName('Alex');
 -- https://www.mysqltutorial.org/mysql-delete-join/
 -- call DeleteBookByID('B03');
 -- call InsertAuthorsAndBooks('23', '4324', '43', '1234', 1);
--- call UpdateUser('U04', 'Hana', '2000-01-03', '0981393166', 'hana@gmail.com');
+-- call AddUser('U04', 'Hana', '2000-01-03', '0981393166', 'hana@gmail.com');
 -- call ReturnBook ('B05', 'U02', 1);
 -- call lendBook ('B05', 1, 'U02', '2020-04-16', '2020-05-16');
