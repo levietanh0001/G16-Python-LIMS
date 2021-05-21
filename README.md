@@ -1,16 +1,16 @@
-# G16-Python-LIMS
+# <span style="color:orange"> G16-Python-LIMS </span>
 
-> <span style="color:blue">About Group</span> 
+> <span style="color:blue; font-weight:bold">About Group</span> 
 ```python
 Group Number: 16
-Group Name: Try Hard 
+Group Name: 'Try Hard' 
 Group Project: Library Information Management System (#13)
 ```
-> Group Members
+> <span style="color:blue; font-weight:bold">About Members</span> 
 <table>
   <tr>
-    <th> Name </th>
-  	<th> Role </th>
+    <th style="color:red; font-weight:bold"> Name </th>
+  	<th style="color:yellow; font-weight:bold"> Role </th>
   </tr>
 
   <tr>
