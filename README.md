@@ -1,6 +1,6 @@
 # G16-Python-LIMS
 
-<span style="color:blue">> </span> About Group
+> <span style="color:blue">About Group</span> 
 ```python
 Group Number: 16
 Group Name: Try Hard 
