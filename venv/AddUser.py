@@ -44,11 +44,11 @@ def addUser():
 
     # create canva
     cv = Canvas(root)
-    cv.config(bg="black")
+    cv.config(bg="green")
     cv.pack(expand=True, fill=BOTH)
 
     # book id
-    lb1 = Label(root, text="User ID ", bg='black', fg='white')
+    lb1 = Label(root, text="User ID ", bg='green', fg='white')
     lb1.place(relx=0.01, rely=0.1, relheight=0.08)
 
     # book id query
@@ -56,7 +56,7 @@ def addUser():
     userID.place(relx=0.3, rely=0.1, relwidth=0.62, relheight=0.08)
 
     # book title
-    lb2 = Label(root, text="User Name ", bg='black', fg='white')
+    lb2 = Label(root, text="User Name ", bg='green', fg='white')
     lb2.place(relx=0.01, rely=0.25, relheight=0.08)
 
     # book title query
@@ -64,7 +64,7 @@ def addUser():
     userName.place(relx=0.3, rely=0.25, relwidth=0.62, relheight=0.08)
 
     # user
-    lb3 = Label(root, text="Date of Birth ", bg='black', fg='white')
+    lb3 = Label(root, text="Date of Birth ", bg='green', fg='white')
     lb3.place(relx=0.01, rely=0.40, relheight=0.08)
 
     # user id query
@@ -72,7 +72,7 @@ def addUser():
     DOB.place(relx=0.3, rely=0.40, relwidth=0.62, relheight=0.08)
 
     # user name
-    lb4 = Label(root, text="Phone Number ", bg='black', fg='white')
+    lb4 = Label(root, text="Phone Number ", bg='green', fg='white')
     lb4.place(relx=0.01, rely=0.55, relheight=0.08)
 
     # author name query
@@ -80,7 +80,7 @@ def addUser():
     phoneNum.place(relx=0.3, rely=0.55, relwidth=0.62, relheight=0.08)
 
     # available copies
-    lb4 = Label(root, text="Email ", bg='black', fg='white')
+    lb4 = Label(root, text="Email ", bg='green', fg='white')
     lb4.place(relx=0.01, rely=0.70, relheight=0.08)
 
     # available copies query

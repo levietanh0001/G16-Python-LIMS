@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk,Image
-from tkinter import messagebox
+#from tkinter import messagebox
 import pymysql
 
 def lendB():
@@ -19,7 +19,7 @@ def lendB():
     try:
         args = [book_id, copies, user_id, b_date, dead_line]
         cur.callproc('LendBook', args)
-        messagebox.showinfo("Error","Book %s is lent to %s" % (book_id, user_id))
+        messagebox.showinfo("Success","Book %s is lent to %s" % (book_id, user_id))
         con.commit()
     except:
         messagebox.showinfo("Error","Can't fetch Book IDs")
