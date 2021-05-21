@@ -131,7 +131,7 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE ViewAllUsers()
 BEGIN
-	SELECT * FROM users WHERE user_id = id;
+	SELECT * FROM users;
 END //
 delimiter ;
 
@@ -155,12 +155,13 @@ delimiter ;
 /* Update Book */
 -- drop procedure if exists UpdateBook;
 delimiter //
-CREATE PROCEDURE UpdateBook(IN id varchar(10), newBookTitle varchar(30), newAvailableCopies int,  newAuthorID varchar(10))
+CREATE PROCEDURE UpdateBook(IN id varchar(10), newBookTitle varchar(30), newAuthorID varchar(10), newAuthorName varchar(10), newAvailableCopies int)
 BEGIN
 	UPDATE books
     SET book_title = newBookTitle, 
 		available_copies = newAvailableCopies, 
-        author_id = newAuthorID
+        author_id = newAuthorID,
+        author_name = newAuthorName
     WHERE book_id = id;	
 END //
 delimiter ;

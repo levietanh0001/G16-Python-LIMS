@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk, Image
-from tkinter import messagebox
+#from tkinter import messagebox
 import pymysql
 
 def delU():
@@ -17,7 +17,7 @@ def delU():
     # error message if unable to delete book
     try:
         args = [user_id]
-        cur.callproc('DeleteBookByID', args)
+        cur.callproc('DeleteUserByID', args)
         con.commit()
         messagebox.showinfo('Success', "User Record Deleted Successfully")
     except:
@@ -37,7 +37,7 @@ def deleteUser():
 
     cv = Canvas(root)
 
-    cv.config(bg="black")
+    cv.config(bg="orange")
     cv.pack(expand=True, fill=BOTH)
 
     # headingLabel = Label(root, text="Delete Book", bg='grey', fg='white', font=('Courier',15))
@@ -46,7 +46,7 @@ def deleteUser():
     # labelFrame = Frame(root,bg='black')
     # labelFrame.place(relx=0.1,rely=0.3,relwidth=0.9,relheight=0.9)
 
-    lb2 = Label(root, text="User ID ", bg='black', fg='white')
+    lb2 = Label(root, text="User ID ", bg='orange', fg='white')
     lb2.place(relx=0.05, rely=0.4)
 
     userID = Entry(root)
