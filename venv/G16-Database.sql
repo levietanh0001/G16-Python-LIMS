@@ -197,11 +197,11 @@ delimiter ;
 
 -- find which user borrows which book
 delimiter //
-CREATE PROCEDURE FindBorrowerByName(in b_name varchar(50)) 
+CREATE PROCEDURE FindBorrowerByName(in borrower_name varchar(50)) 
 begin
     select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
     from users inner join lent_books 
-    on (users.user_id=lent_books.user_id and users.user_name=b_name)
+    on (users.user_id=lent_books.user_id and users.user_name=borrower_name)
     join books 
     on (lent_books.book_id=books.book_id)
     ;
@@ -221,6 +221,10 @@ begin
 end //
 delimiter ;
 
+
+
+
+-- call ShowAllBorrowers();
 -- call FindBorrowerByName('Alex');
 -- https://www.mysqltutorial.org/mysql-delete-join/
 -- call DeleteBookByID('B03');
