@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk,Image
-from tkinter import messagebox
+#from tkinter import messagebox
 import pymysql
 
 # Add your own database name and password here to reflect in the code
@@ -28,7 +28,7 @@ def retB():
         args = [book_id, user_id, copies]
         cur.callproc('ReturnBook', args)
         con.commit()
-        messagebox.showinfo("Error","Book ID not present")
+        messagebox.showinfo("Success","The book(s) has returned.")
     except:
         messagebox.showinfo("Error","Can't fetch Book IDs")
 
