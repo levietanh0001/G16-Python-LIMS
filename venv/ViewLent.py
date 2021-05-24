@@ -69,12 +69,12 @@ def viewLent():
     trv.heading('#3', text='User ID')
     trv.heading('#4', text='Borrowed date')
     trv.heading('#5', text='Deadline')
-    trv.column('#0', width=1, minwidth=1)
-    trv.column('#1', width=25, minwidth=75)
-    trv.column('#2', width=100, minwidth=100)
-    trv.column('#3', width=120, minwidth=100)
-    trv.column('#4', width=120, minwidth=100)
-    trv.column('#5', width=120, minwidth=150)
+    trv.column('#0', width=50, minwidth=100)
+    trv.column('#1', width=120, minwidth=200)
+    trv.column('#2', width=120, minwidth=200)
+    trv.column('#3', width=120, minwidth=200)
+    trv.column('#4', width=120, minwidth=200)
+    trv.column('#5', width=120, minwidth=200)
 
         # vertical scroll bar
     yscrollbar = ttk.Scrollbar(wrapper1, orient="vertical", command=trv.yview)
