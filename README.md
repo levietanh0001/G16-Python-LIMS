@@ -2,9 +2,11 @@
 
 > <span style="color:blue; font-weight:bold">About Group</span> 
 ```python
-Group Number: 16
-Group Name: 'Try Hard' 
-Group Project: Library Information Management System (#13)
+Subject: 'Advanced Programming With Python',
+Group Number: 16,
+Group Name: 'Try Hard',
+Group Project: 'Library Information Management System',
+Project Number: 13
 ```
 > <span style="color:blue; font-weight:bold">About Members</span> 
 <table>
@@ -15,7 +17,7 @@ Group Project: Library Information Management System (#13)
 
   <tr>
   	<td> Le Viet Anh </td>
-  	<td> Code, demonstrate </td>
+  	<td> Code python, update database, demonstrate </td>
   </tr>
   
   <tr>
@@ -25,7 +27,7 @@ Group Project: Library Information Management System (#13)
 
   <tr>
   	<td> Vu Tuan Phuong Nam </td>
-  	<td> Debug, code quality control, UML </td>
+  	<td> Debug python, code quality control, UML </td>
   </tr>
 
   <tr>
