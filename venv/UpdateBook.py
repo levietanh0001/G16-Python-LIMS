@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk, Image
-#from tkinter import messagebox
+from tkinter import messagebox
 import pymysql
 
 
@@ -21,7 +21,7 @@ def updB():
 
     # error message if unable to add book
     try:
-        args = [book_id, title, author_id, author_name, copies]
+        args = [book_id, title, copies, author_id]
         cur.callproc('UpdateBook', args)
         con.commit()
         messagebox.showinfo('Success', "Book updated successfully")
@@ -44,11 +44,11 @@ def updateBook():
 
     # create canva
     cv = Canvas(root)
-    cv.config(bg="blue")
+    cv.config(bg="black")
     cv.pack(expand=True, fill=BOTH)
 
     # book id
-    lb1 = Label(root, text="Book ID : ", bg='blue', fg='white')
+    lb1 = Label(root, text="Book ID : ", bg='black', fg='white')
     lb1.place(relx=0.01, rely=0.1, relheight=0.08)
 
     # book id query
@@ -56,7 +56,7 @@ def updateBook():
     bookID.place(relx=0.3, rely=0.1, relwidth=0.62, relheight=0.08)
 
     # book title
-    lb2 = Label(root, text="Title : ", bg='blue', fg='white')
+    lb2 = Label(root, text="Title : ", bg='black', fg='white')
     lb2.place(relx=0.01, rely=0.25, relheight=0.08)
 
     # book title query
@@ -64,7 +64,7 @@ def updateBook():
     bookTitle.place(relx=0.3, rely=0.25, relwidth=0.62, relheight=0.08)
 
     # author
-    lb3 = Label(root, text="Author ID : ", bg='blue', fg='white')
+    lb3 = Label(root, text="Author ID : ", bg='black', fg='white')
     lb3.place(relx=0.01, rely=0.40, relheight=0.08)
 
     # author id query
@@ -72,7 +72,7 @@ def updateBook():
     authorID.place(relx=0.3, rely=0.40, relwidth=0.62, relheight=0.08)
 
     # author name
-    lb4 = Label(root, text="Author Name : ", bg='blue', fg='white')
+    lb4 = Label(root, text="Author Name : ", bg='black', fg='white')
     lb4.place(relx=0.01, rely=0.55, relheight=0.08)
 
     # author name query
@@ -80,7 +80,7 @@ def updateBook():
     authorName.place(relx=0.3, rely=0.55, relwidth=0.62, relheight=0.08)
 
     # available copies
-    lb4 = Label(root, text="Available Copies: ", bg='blue', fg='white')
+    lb4 = Label(root, text="Available Copies: ", bg='black', fg='white')
     lb4.place(relx=0.01, rely=0.70, relheight=0.08)
 
     # available copies query

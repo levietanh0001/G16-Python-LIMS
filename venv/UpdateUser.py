@@ -45,34 +45,34 @@ def updateUser():
 
     # create canva
     cv = Canvas(root)
-    cv.config(bg="blue")
+    cv.config(bg="black")
     cv.pack(expand=True, fill=BOTH)
 
-    lb1 = Label(root, text="User ID : ", bg='blue', fg='white')
+    lb1 = Label(root, text="User ID : ", bg='black', fg='white')
     lb1.place(relx=0.01, rely=0.1, relheight=0.08)
 
     userID = Entry(root)
     userID.place(relx=0.3, rely=0.1, relwidth=0.62, relheight=0.08)
 
-    lb2 = Label(root, text="User Name : ", bg='blue', fg='white')
+    lb2 = Label(root, text="User Name : ", bg='black', fg='white')
     lb2.place(relx=0.01, rely=0.25, relheight=0.08)
 
     userName = Entry(root)
     userName.place(relx=0.3, rely=0.25, relwidth=0.62, relheight=0.08)
 
-    lb3 = Label(root, text="Date of Birth : ", bg='blue', fg='white')
+    lb3 = Label(root, text="Date of Birth : ", bg='black', fg='white')
     lb3.place(relx=0.01, rely=0.40, relheight=0.08)
 
     DOB = Entry(root)
     DOB.place(relx=0.3, rely=0.40, relwidth=0.62, relheight=0.08)
 
-    lb4 = Label(root, text="Phone Number : ", bg='blue', fg='white')
+    lb4 = Label(root, text="Phone Number : ", bg='black', fg='white')
     lb4.place(relx=0.01, rely=0.55, relheight=0.08)
 
     phoneNum = Entry(root)
     phoneNum.place(relx=0.3, rely=0.55, relwidth=0.62, relheight=0.08)
 
-    lb4 = Label(root, text="Email: ", bg='blue', fg='white')
+    lb4 = Label(root, text="Email: ", bg='black', fg='white')
     lb4.place(relx=0.01, rely=0.70, relheight=0.08)
 
     emailAddr = Entry(root)

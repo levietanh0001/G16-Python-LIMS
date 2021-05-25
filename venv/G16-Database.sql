@@ -31,7 +31,7 @@ create table lent_books(
 );
 
 ALTER TABLE lent_books ADD FOREIGN KEY(user_id) REFERENCES users(user_id);
-ALTER TABLE lent_books ADD FOREIGN KEY(book_id) REFERENCES books(book_id);
+ALTER TABLE lent_books ADD FOREIGN KEY(book_id) REFERENCES books(book_id) on delete cascade;
 ALTER TABLE books ADD FOREIGN KEY(author_id) REFERENCES authors(author_id);
 
 -- Chinh sua tu dong nay tro xuong
@@ -131,7 +131,7 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE ViewAllUsers()
 BEGIN
-	SELECT * FROM users;
+	SELECT * FROM users WHERE user_id = id;
 END //
 delimiter ;
 
@@ -155,13 +155,12 @@ delimiter ;
 /* Update Book */
 -- drop procedure if exists UpdateBook;
 delimiter //
-CREATE PROCEDURE UpdateBook(IN id varchar(10), newBookTitle varchar(30), newAuthorID varchar(10), newAuthorName varchar(10), newAvailableCopies int)
+CREATE PROCEDURE UpdateBook(IN id varchar(10), newBookTitle varchar(30), newAvailableCopies int,  newAuthorID varchar(10))
 BEGIN
 	UPDATE books
     SET book_title = newBookTitle, 
 		available_copies = newAvailableCopies, 
-        author_id = newAuthorID,
-        author_name = newAuthorName
+        author_id = newAuthorID
     WHERE book_id = id;	
 END //
 delimiter ;
@@ -198,11 +197,11 @@ delimiter ;
 
 -- find which user borrows which book
 delimiter //
-CREATE PROCEDURE FindBorrowerByName(in borrower_name varchar(50)) 
+CREATE PROCEDURE FindBorrowerByName(in b_name varchar(50)) 
 begin
     select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
     from users inner join lent_books 
-    on (users.user_id=lent_books.user_id and users.user_name=borrower_name)
+    on (users.user_id=lent_books.user_id and users.user_name=b_name)
     join books 
     on (lent_books.book_id=books.book_id)
     ;
@@ -216,18 +215,60 @@ begin
     select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
     from users inner join lent_books 
     on (users.user_id=lent_books.user_id)
-    join books 
+    inner join books 
     on (lent_books.book_id=books.book_id)
     ;
 end //
 delimiter ;
 
+delimiter //
+CREATE PROCEDURE DeleteBookByName(IN book_name varchar(10))
+BEGIN
+-- 	delete books, lent_books
+--     from lent_books inner join books 
+--     on books.book_id=lent_books.book_id
+--     where books.book_title=book_name
+--     ;
+	delete from books where books.book_title=book_name;
+END //
+delimiter ;
 
+delimiter //
+CREATE PROCEDURE ShowAllBooksByBorrowerName(IN borrower_name varchar(10))
+BEGIN
+	select users.user_id, users.user_name, lent_books.book_id, books.book_title, lent_books.lent_copies 
+    from lent_books inner join users
+    on users.user_name = borrower_name and users.user_id = lent_books.user_id
+    inner join books
+    on books.book_id = lent_books.book_id
+    ;
+END //
+delimiter ;
 
+delimiter //
+CREATE PROCEDURE ShowAllBooksByBorrowerID(IN id varchar(10))
+BEGIN
+	select users.user_id, users.user_name, lent_books.book_id, books.book_title, lent_books.lent_copies 
+    from lent_books inner join users
+    on users.user_id = id and users.user_id = lent_books.user_id
+    inner join books
+    on books.book_id = lent_books.book_id
+    ;
+END //
+delimiter ;
 
--- call ShowAllBorrowers();
+-- delimiter //
+-- CREATE PROCEDURE ShowAllBooksByBorrowerID(IN id varchar(10))
+-- BEGIN
+-- 	
+-- END //
+-- delimiter ;
+
+-- call UpdateBook (
+-- call ShowAllBooksByBorrowerID('U01');
+-- call ShowAllBooksByBorrowerName('Wong');
+-- call DeleteBookByID('B02');
 -- call FindBorrowerByName('Alex');
--- https://www.mysqltutorial.org/mysql-delete-join/
 -- call DeleteBookByID('B03');
 -- call InsertAuthorsAndBooks('23', '4324', '43', '1234', 1);
 -- call AddUser('U04', 'Hana', '2000-01-03', '0981393166', 'hana@gmail.com');

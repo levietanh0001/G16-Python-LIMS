@@ -7,47 +7,12 @@ from PIL import ImageTk, Image
 import pymysql
 
 
-
-# def toggle2(event):
-#     for i in trv.get_children():
-#         trv.item(i, tags="unchecked")
-#         toggleCheck(event)
-#
-# def toogleCheck(event):
-#     rowid = trv.identify_row(event.y)
-#     tag = trv.item(rowid, "tags")[0]
-#     tags = list(trv.item(rowid, "tags"))
-#     tags.remove(tag)
-#     trv.item(rowid, tags=tags)
-#     if tag == "checked":
-#         trv.item(rowid, tags="unchecked")
-#     else:
-#         trv.item(rowid, tags="checked")
-#
-# def search():
-#     q2 = q.get()
-#     query = "select book_id, book_title, author_id, available_copies from books"
-#     cursor.execute(query)
-#     rows = cursor.fetchall()
-#     update(rows)
-#
-# def clear():
-#     query = "select book_id, book_title, author_id, available_copies from books"
-#     cursor.execute(query)
-#     rows = cursor.fetchall()
-#     update(rows)
-
-def viewUsers():
+def viewBorrowers():
 
     root = Tk()
     root.title("Scrollable Tree View")
     root.resizable(False, False)
     root.geometry("700x400")
-    q = StringVar()
-    t1 = StringVar()
-    t2 = StringVar()
-    t3 = StringVar()
-    t4 = StringVar()
 
     wrapper1 = Frame(root)
     wrapper2 = LabelFrame(root, text="")
@@ -57,7 +22,7 @@ def viewUsers():
     # wrapper2.pack(fill="both", expand="yes", padx=20, pady=10)
     # wrapper3.pack(fill="both", expand="yes", padx=20, pady=10)
 
-    trv = ttk.Treeview(wrapper1, columns=(1,2,3,4,5))
+    trv = ttk.Treeview(wrapper1, columns=(1,2,3,4,5,6))
     style = ttk.Style(trv)
     style.configure('Treeview', rowheight=30)
 
@@ -67,14 +32,16 @@ def viewUsers():
     trv.heading('#1', text='User ID')
     trv.heading('#2', text='User Name')
     trv.heading('#3', text='Date of Birth')
-    trv.heading('#4', text='Phone Number')
-    trv.heading('#5', text='Email')
+    trv.heading('#4', text='Book ID')
+    trv.heading('#5', text='Book Title')
+    trv.heading('#6', text='Copies Borrowed')
     trv.column('#0', width=50, minwidth=100)
-    trv.column('#1', width=120, minwidth=200)
-    trv.column('#2', width=120, minwidth=200)
-    trv.column('#3', width=120, minwidth=200)
-    trv.column('#4', width=120, minwidth=200)
-    trv.column('#5', width=120, minwidth=200)
+    trv.column('#1', width=100, minwidth=200)
+    trv.column('#2', width=100, minwidth=200)
+    trv.column('#3', width=100, minwidth=200)
+    trv.column('#4', width=100, minwidth=200)
+    trv.column('#5', width=100, minwidth=200)
+    trv.column('#6', width=100, minwidth=200)
 
         # vertical scroll bar
     yscrollbar = ttk.Scrollbar(wrapper1, orient="vertical", command=trv.yview)
@@ -95,8 +62,10 @@ def viewUsers():
     cur = con.cursor()
     book_table = "books"
 
-    query = "select * from users"
-    cur.execute(query)
+    # error message if unable to view borrowers
+
+    cur.callproc('ShowAllBorrowers')
+    # con.commit()
     rows = cur.fetchall()
 
     trv.delete(*trv.get_children())

@@ -6,7 +6,7 @@ import mysql.connector
 from PIL import ImageTk, Image
 import pymysql
 
-def viewBooks():
+def viewBooks2(view_books_frame):
 
     root = Tk()
     root.title("Scrollable Tree View")
@@ -18,15 +18,15 @@ def viewBooks():
     t3 = StringVar()
     t4 = StringVar()
 
-    wrapper1 = Frame(root)
+    # wrapper1 = Frame(root)
     wrapper2 = LabelFrame(root, text="")
     # wrapper3 = LabelFrame(root, text="Book Details")
 
-    wrapper1.pack(fill="both", expand="yes", padx=20, pady=10)
+    view_books_frame.pack(fill="both", expand="yes")
     # wrapper2.pack(fill="both", expand="yes", padx=20, pady=10)
     # wrapper3.pack(fill="both", expand="yes", padx=20, pady=10)
 
-    trv = ttk.Treeview(wrapper1, columns=(1,2,3,4))
+    trv = ttk.Treeview(view_books_frame, columns=(1,2,3,4))
     style = ttk.Style(trv)
     style.configure('Treeview', rowheight=30)
 
@@ -44,11 +44,11 @@ def viewBooks():
     trv.column('#4', width=150, minwidth=200)
 
         # vertical scroll bar
-    yscrollbar = ttk.Scrollbar(wrapper1, orient="vertical", command=trv.yview)
+    yscrollbar = ttk.Scrollbar(view_books_frame, orient="vertical", command=trv.yview)
     yscrollbar.pack(side=RIGHT, fill=Y)
 
         # horizontal scroll bar
-    xscrollbar = ttk.Scrollbar(wrapper1, orient="horizontal", command=trv.xview)
+    xscrollbar = ttk.Scrollbar(view_books_frame, orient="horizontal", command=trv.xview)
     xscrollbar.pack(side=BOTTOM, fill=X)
 
     trv.configure(yscrollcommand=yscrollbar.set, xscrollcommand=xscrollbar)
