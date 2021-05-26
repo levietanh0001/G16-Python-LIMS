@@ -1,5 +1,5 @@
-# <span style="color:orange"> G16-Python-LIMS-pp2021 </span>
-
+# <span style="color:orange"> G16-Python-LIMS </span>
+## pp2021
 > <span style="color:blue; font-weight:bold">About Group</span> 
 ```python
 Subject: Advanced Programming With Python
