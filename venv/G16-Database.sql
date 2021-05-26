@@ -197,11 +197,24 @@ delimiter ;
 
 -- find which user borrows which book
 delimiter //
-CREATE PROCEDURE FindBorrowerByName(in b_name varchar(50)) 
+CREATE PROCEDURE FindBorrowerByName(in u_name varchar(50)) 
 begin
     select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
     from users inner join lent_books 
-    on (users.user_id=lent_books.user_id and users.user_name=b_name)
+    on (users.user_id=lent_books.user_id and users.user_name=u_name)
+    join books 
+    on (lent_books.book_id=books.book_id)
+    ;
+end //
+delimiter ;
+
+-- find which user borrows which book
+delimiter //
+CREATE PROCEDURE ShowBorrowersByBookName(in b_name varchar(50)) 
+begin
+    select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
+    from users inner join lent_books 
+    on (users.user_id=lent_books.user_id)
     join books 
     on (lent_books.book_id=books.book_id)
     ;
@@ -256,6 +269,7 @@ BEGIN
     ;
 END //
 delimiter ;
+
 
 -- delimiter //
 -- CREATE PROCEDURE ShowAllBooksByBorrowerID(IN id varchar(10))
