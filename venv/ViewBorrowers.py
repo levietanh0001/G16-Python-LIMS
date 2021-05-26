@@ -10,7 +10,7 @@ import pymysql
 def viewBorrowers():
 
     root = Tk()
-    root.title("Scrollable Tree View")
+    root.title("Borrowers")
     root.resizable(False, False)
     root.geometry("700x400")
 
@@ -22,7 +22,7 @@ def viewBorrowers():
     # wrapper2.pack(fill="both", expand="yes", padx=20, pady=10)
     # wrapper3.pack(fill="both", expand="yes", padx=20, pady=10)
 
-    trv = ttk.Treeview(wrapper1, columns=(1,2,3,4,5,6))
+    trv = ttk.Treeview(wrapper1, columns=(1,2,3,4,5,6,7,8))
     style = ttk.Style(trv)
     style.configure('Treeview', rowheight=30)
 
@@ -35,13 +35,18 @@ def viewBorrowers():
     trv.heading('#4', text='Book ID')
     trv.heading('#5', text='Book Title')
     trv.heading('#6', text='Copies Borrowed')
-    trv.column('#0', width=50, minwidth=100)
-    trv.column('#1', width=100, minwidth=200)
-    trv.column('#2', width=100, minwidth=200)
-    trv.column('#3', width=100, minwidth=200)
-    trv.column('#4', width=100, minwidth=200)
+    trv.heading('#7', text='Borrowed date')
+    trv.heading('#8', text='Deadline')
+
+    trv.column('#0', width=1, minwidth=1)
+    trv.column('#1', width=50, minwidth=50)
+    trv.column('#2', width=50, minwidth=75)
+    trv.column('#3', width=100, minwidth=100)
+    trv.column('#4', width=50, minwidth=50)
     trv.column('#5', width=100, minwidth=200)
-    trv.column('#6', width=100, minwidth=200)
+    trv.column('#6', width=50, minwidth=100)
+    trv.column('#7', width=100, minwidth=100)
+    trv.column('#8', width=100, minwidth=100)
 
         # vertical scroll bar
     yscrollbar = ttk.Scrollbar(wrapper1, orient="vertical", command=trv.yview)

@@ -17,7 +17,7 @@ def delU():
     # error message if unable to delete book
     try:
         args = [user_id]
-        cur.callproc('DeleteBookByID', args)
+        cur.callproc('DeleteUserByID', args)
         con.commit()
         messagebox.showinfo('Success', "User Record Deleted Successfully")
     except:
@@ -39,12 +39,6 @@ def deleteUser():
 
     cv.config(bg="black")
     cv.pack(expand=True, fill=BOTH)
-
-    # headingLabel = Label(root, text="Delete Book", bg='grey', fg='white', font=('Courier',15))
-    # headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
-    #
-    # labelFrame = Frame(root,bg='black')
-    # labelFrame.place(relx=0.1,rely=0.3,relwidth=0.9,relheight=0.9)
 
     lb2 = Label(root, text="User ID ", bg='black', fg='white')
     lb2.place(relx=0.05, rely=0.4)

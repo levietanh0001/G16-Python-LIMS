@@ -225,7 +225,7 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE ShowAllBorrowers() 
 begin
-    select users.user_id, user_name, dob, books.book_id, book_title, lent_copies 
+    select users.user_id, user_name, dob, books.book_id, book_title, lent_copies, borrowed_date, deadline
     from users inner join lent_books 
     on (users.user_id=lent_books.user_id)
     inner join books 

@@ -10,7 +10,7 @@ import pymysql
 def view_borrowers_by_book_name():
 
     root = Tk()
-    root.title("Scrollable Tree View")
+    root.title("Borrower by Book Name")
     root.resizable(False, False)
     root.geometry("700x400")
 

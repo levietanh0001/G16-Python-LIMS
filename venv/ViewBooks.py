@@ -9,7 +9,7 @@ import pymysql
 def viewBooks():
 
     root = Tk()
-    root.title("Scrollable Tree View")
+    root.title("Books")
     root.resizable(False, False)
     root.geometry("700x400")
     q = StringVar()
@@ -20,13 +20,10 @@ def viewBooks():
 
     wrapper1 = Frame(root)
     wrapper2 = LabelFrame(root, text="")
-    # wrapper3 = LabelFrame(root, text="Book Details")
 
     wrapper1.pack(fill="both", expand="yes", padx=20, pady=10)
-    # wrapper2.pack(fill="both", expand="yes", padx=20, pady=10)
-    # wrapper3.pack(fill="both", expand="yes", padx=20, pady=10)
-
-    trv = ttk.Treeview(wrapper1, columns=(1,2,3,4))
+    
+    trv = ttk.Treeview(wrapper1, columns=(1,2,3,4,5))
     style = ttk.Style(trv)
     style.configure('Treeview', rowheight=30)
 
@@ -35,13 +32,15 @@ def viewBooks():
     trv.heading('#0', text='')
     trv.heading('#1', text='Book ID')
     trv.heading('#2', text='Title')
-    trv.heading('#3', text='Author')
-    trv.heading('#4', text='Copies')
-    trv.column('#0', width=50, minwidth=100)
-    trv.column('#1', width=150, minwidth=200)
-    trv.column('#2', width=150, minwidth=200)
-    trv.column('#3', width=150, minwidth=200)
-    trv.column('#4', width=150, minwidth=200)
+    trv.heading('#3', text='Author ID')
+    trv.heading('#4', text='Author Name')
+    trv.heading('#5', text='Copies')
+    trv.column('#0', width=1, minwidth=1)
+    trv.column('#1', width=50, minwidth=60)
+    trv.column('#2', width=175, minwidth=200)
+    trv.column('#3', width=50, minwidth=60)
+    trv.column('#4', width=100, minwidth=100)
+    trv.column('#5', width=25, minwidth=50)
 
         # vertical scroll bar
     yscrollbar = ttk.Scrollbar(wrapper1, orient="vertical", command=trv.yview)
@@ -62,7 +61,7 @@ def viewBooks():
     cur = con.cursor()
     book_table = "books"
 
-    query = "select book_id, book_title, author_id, available_copies from books"
+    query = "select book_id, book_title, authors.author_id, authors.author_name, available_copies from books, authors where books.author_id = authors.author_id"
     cur.execute(query)
     rows = cur.fetchall()
 
