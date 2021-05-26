@@ -37,6 +37,6 @@ Project Number: 13
   
   <tr>
   	<td> Nguyen Tu Tung </td>
-  	<td> Report </td>
+  	<td> Write report </td>
   </tr>  
 </table>
