@@ -40,3 +40,11 @@ Project Number: 13
   	<td> Write report </td>
   </tr>  
 </table>
+
+1, Activate virtual environment for Windows: venv/Scripts/activate
+
+2, Host G16-Database.sql in MySQL localhost server
+
+3, Run main python file in virtual environment: python main.py
+
+** The installed packages are in requirement folder with requirements.txt **
