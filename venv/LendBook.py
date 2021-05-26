@@ -19,7 +19,7 @@ def lendB():
     try:
         args = [book_id, copies, user_id, b_date, dead_line]
         cur.callproc('LendBook', args)
-        messagebox.showinfo("Error","Book %s is lent to %s" % (book_id, user_id))
+        messagebox.showinfo("Completed","Book %s is lent to %s" % (book_id, user_id))
         con.commit()
     except:
         messagebox.showinfo("Error","Can't fetch Book IDs")

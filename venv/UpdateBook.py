@@ -87,14 +87,6 @@ def updateBook():
     avail = Entry(root)
     avail.place(relx=0.3, rely=0.70, relwidth=0.62, relheight=0.08)
 
-    #     # book status
-    # lb4 = Label(root,text="Status(Avail/issued) : ", bg='black', fg='white')
-    # lb4.place(relx=0.01,rely=0.55, relheight=0.08)
-    #
-    #     # book status query
-    # bookStatus = Entry(root)
-    # bookStatus.place(relx=0.3,rely=0.55, relwidth=0.62, relheight=0.08)
-
     # submit button
     submit_button = Button(root, text="SUBMIT", bg='#d1ccc0', fg='black', command=updB)
     submit_button.place(relx=0.28, rely=0.9, relwidth=0.18, relheight=0.08)

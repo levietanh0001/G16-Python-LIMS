@@ -40,7 +40,7 @@ import pymysql
 def viewUsers():
 
     root = Tk()
-    root.title("Scrollable Tree View")
+    root.title("Users")
     root.resizable(False, False)
     root.geometry("700x400")
     q = StringVar()
@@ -69,12 +69,12 @@ def viewUsers():
     trv.heading('#3', text='Date of Birth')
     trv.heading('#4', text='Phone Number')
     trv.heading('#5', text='Email')
-    trv.column('#0', width=50, minwidth=100)
-    trv.column('#1', width=120, minwidth=200)
-    trv.column('#2', width=120, minwidth=200)
-    trv.column('#3', width=120, minwidth=200)
-    trv.column('#4', width=120, minwidth=200)
-    trv.column('#5', width=120, minwidth=200)
+    trv.column('#0', width=1, minwidth=1)
+    trv.column('#1', width=25, minwidth=75)
+    trv.column('#2', width=100, minwidth=100)
+    trv.column('#3', width=100, minwidth=100)
+    trv.column('#4', width=100, minwidth=100)
+    trv.column('#5', width=120, minwidth=150)
 
         # vertical scroll bar
     yscrollbar = ttk.Scrollbar(wrapper1, orient="vertical", command=trv.yview)

@@ -7,7 +7,7 @@ import pymysql
 def view_borrower_by_name():
 
     root = Tk()
-    root.title("Scrollable Tree View")
+    root.title("Borrower by User Name")
     root.resizable(False, False)
     root.geometry("700x400")
 
@@ -32,8 +32,8 @@ def view_borrower_by_name():
     trv.heading('#4', text='Book ID')
     trv.heading('#5', text='Book Title')
     trv.heading('#6', text='Copies Borrowed')
-    trv.column('#0', width=50, minwidth=100)
-    trv.column('#1', width=100, minwidth=200)
+    trv.column('#0', width=1, minwidth=1)
+    trv.column('#1', width=50, minwidth=75)
     trv.column('#2', width=100, minwidth=200)
     trv.column('#3', width=100, minwidth=200)
     trv.column('#4', width=100, minwidth=200)

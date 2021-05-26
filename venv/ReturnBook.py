@@ -28,7 +28,7 @@ def retB():
         args = [book_id, user_id, copies]
         cur.callproc('ReturnBook', args)
         con.commit()
-        messagebox.showinfo("Error","Book ID not present")
+        messagebox.showinfo("Completed","Book %s has been returned" % (book_id))
     except:
         messagebox.showinfo("Error","Can't fetch Book IDs")
 
