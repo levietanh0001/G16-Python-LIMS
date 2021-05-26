@@ -12,7 +12,7 @@ def viewBorrowers():
     root = Tk()
     root.title("Borrowers")
     root.resizable(False, False)
-    root.geometry("700x400")
+    root.geometry("650x400")
 
     wrapper1 = Frame(root)
     wrapper2 = LabelFrame(root, text="")
