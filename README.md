@@ -2,10 +2,10 @@
 
 > <span style="color:blue; font-weight:bold">About Group</span> 
 ```python
-Subject: 'Advanced Programming With Python',
-Group Number: 16,
-Group Name: 'Try Hard',
-Group Project: 'Library Information Management System',
+Subject: Advanced Programming With Python
+Group Number: 16
+Group Name: Try Hard
+Group Project: Library Information Management System
 Project Number: 13
 ```
 > <span style="color:blue; font-weight:bold">About Members</span> 
