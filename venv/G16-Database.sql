@@ -216,7 +216,7 @@ begin
     from users inner join lent_books 
     on (users.user_id=lent_books.user_id)
     join books 
-    on (lent_books.book_id=books.book_id)
+    on (lent_books.book_id=books.book_id and books.book_title=b_name)
     ;
 end //
 delimiter ;
