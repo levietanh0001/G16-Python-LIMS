@@ -1,6 +1,6 @@
-# <span style="color:orange"> G16-Python-LIMS </span>
-## pp2021
-> <span style="color:blue; font-weight:bold">About Group</span> 
+# <span style="color:orange"> G16-Python-LIMS (#pp2021) </span>
+
+## <span style="color:blue; font-weight:bold">About Group</span> 
 ```python
 Subject: Advanced Programming With Python
 Group Number: 16
@@ -8,7 +8,7 @@ Group Name: Try Hard
 Group Project: Library Information Management System
 Project Number: 13
 ```
-> <span style="color:blue; font-weight:bold">About Members</span> 
+## <span style="color:blue; font-weight:bold">About Members</span> 
 <table>
   <tr>
     <th style="color:red; font-weight:bold"> Name </th>
@@ -41,14 +41,18 @@ Project Number: 13
   </tr>  
 </table>
 
+## Presentation link 
+https://drive.google.com/file/d/1VV5kZHuKMK5ScaVzOh3nn1JoxHC2EXu2/view?usp=sharing
+
+## Further details
+
 1. Activate virtual environment for Windows: venv/Scripts/activate
 
 2. Host G16-Database.sql in MySQL localhost server
 
 3. Run main python file in virtual environment: python main.py
 
-** The installed packages are in requirement folder with requirements.txt **
-Presentation link: https://drive.google.com/file/d/1VV5kZHuKMK5ScaVzOh3nn1JoxHC2EXu2/view?usp=sharing
+4. The installed packages are in requirement folder with requirements.txt
 
-> Modified version </br>
+## Modified version
 <p> https://github.com/vietanh2000april/G16-Python-LIMS-Mod </p>
