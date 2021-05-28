@@ -41,10 +41,10 @@ Project Number: 13
   </tr>  
 </table>
 
-## Presentation link 
+## Presentation Link 
 https://drive.google.com/file/d/1VV5kZHuKMK5ScaVzOh3nn1JoxHC2EXu2/view?usp=sharing
 
-## Further details
+## Further Details
 
 1. Activate virtual environment for Windows: venv/Scripts/activate
 
@@ -54,5 +54,5 @@ https://drive.google.com/file/d/1VV5kZHuKMK5ScaVzOh3nn1JoxHC2EXu2/view?usp=shari
 
 4. The installed packages are in requirement folder with requirements.txt
 
-## Modified version
+## Modified Version
 <p> https://github.com/vietanh2000april/G16-Python-LIMS-Mod </p>
