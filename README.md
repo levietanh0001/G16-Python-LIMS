@@ -51,4 +51,4 @@ Project Number: 13
 Presentation link: https://drive.google.com/file/d/1VV5kZHuKMK5ScaVzOh3nn1JoxHC2EXu2/view?usp=sharing
 
 > Modified version </br>
-https://github.com/vietanh2000april/G16-Python-LIMS-Mod
+<p> https://github.com/vietanh2000april/G16-Python-LIMS-Mod </p>
