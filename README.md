@@ -50,5 +50,5 @@ Project Number: 13
 ** The installed packages are in requirement folder with requirements.txt **
 Presentation link: https://drive.google.com/file/d/1VV5kZHuKMK5ScaVzOh3nn1JoxHC2EXu2/view?usp=sharing
 
-> Modified version
+> Modified version </br>
 https://github.com/vietanh2000april/G16-Python-LIMS-Mod
