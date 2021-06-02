@@ -1,15 +1,17 @@
 
-# Intro about problem:
+# Report Python
 
-## From the past up to now, books are the most important things that can not be replaced. From a book, we can obtain many things like information, knowledge, … There are a lot of place we can find books. We can find books in the store, on the internet or in the library. , those are some place that contain a ton of book and you can find almost every thing here, especially some large library. But it’s not easy for you to find your favorite book in that “massive” numbers of books in the library , and it’s also not easy for the keepers(librarian) to keep tract of those books that you and your friends borrow. In this case, library management is the most important thing to deal  with the librarians. To meet the librarians need, we , the Try Hard team, introducing to you an app that we are working on it, which called The Library Management System.
+## Intro about problem:
+
+ From the past up till now, books are the most important things that can not be replaced. From a book, we can obtain many things like information, knowledge, … There are a lot of place we can find books. We can find books in the store, on the internet or in the library. , those are some place that contain a ton of book and you can find almost every thing here, especially some large library. But it’s not easy for you to find your favorite book in that “massive” numbers of books in the library , and it’s also not easy for the keepers(librarian) to keep tract of those books that you and your friends borrow. In this case, library management is the most important thing to deal  with the librarians. To meet the librarians need, we , the Try Hard team, introducing to you an app that we are working on it, which called The Library Management System.
 ### Some general information about the system:
-+This system is very easy to use
++ This system is very easy to use.
 + Have a quality, catchy, simple interface.
-+Understandable functions, even for some “newbies” librarian.
-+make Librarians life much more easier.
-+Help the librarian keep in touch with their “Customer”.
-+Saving time, energy
-# So What do the software do:
++ Understandable functions, even for some “newbies” librarian.
++ Make Librarians life much more easier.
++ Help the librarian keep in touch with their “Customer”.
++ Saving time, energy.
+## So What do the software do:
 ![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture1.png)
 This is an interface of our software. You can always access to each function you need by click on the button. There are thirteen button on the interface, you can use them to access thirteen different function in the system which we will show you right now.
 First is books management , have four button. These four button will help you in managing available books, modifying book’s detail and adding new books. 
@@ -107,15 +109,15 @@ You can insert the user name (in View borrowed by name) or book name ( in view b
 Those are all the function that our software have right now, but we will have an update soon. 
 
 
-# Why choose our software???
+## Why choose our software???
 
-## There are a lot of reason that you must use my program:
+### There are a lot of reason that you must use my program:
 + We have a good and hard-working bug fixer.
 + Have a strong code writer who are always willing to improve the software.
 + Have beautiful design, a lot of function, easy to use. This will make you feel comfortable.
 + Have a nice customer service team who will listen to you whenever you need.
 
-## This is an UML/ Database diagram of our software
+### This is an UML/ Database diagram of our software
 
 ![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture8.png)
 
