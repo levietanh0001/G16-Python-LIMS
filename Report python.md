@@ -103,3 +103,12 @@ Those are all the function that our software have right now, but we will have an
 + Have a nice customer service team who will listen to you whenever you need.
 
 ## This is an UML/ Database diagram of our software
+
+About our future plan
+This is our 1.0 version of the software with some basic function,  but it is enough for you to use as a librarian. Our promise is we will make it more magnificent, adding some more function such as:
++ Sorting the database with certain order.
++ Adding some information to the database :genres, date release books, …
++ Creating OOP application with the method for customer usage and its database.
++ Making some unique function for some specific role in the library.
++ Having a log in system to distinguish administrative control from customer control.
+
