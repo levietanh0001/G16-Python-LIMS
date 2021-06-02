@@ -171,7 +171,7 @@ And output Is received from input and show out.
 
 This is our updating UI structure:
 
-
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/pic19.png)   
 
 ## About our future plan
 This is our 1.0 version of the software with some basic function,  but it is enough for you to use as a librarian. Our promise is we will make it more magnificent, adding some more function such as:
