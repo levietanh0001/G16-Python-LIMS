@@ -133,7 +133,7 @@ Those are all the function that our software have right now, but we will have an
 + Have a strong code writer who are always willing to improve the software.
 + Have beautiful design, a lot of function, easy to use. This will make you feel comfortable.
 + Have a nice customer service team who will listen to you whenever you need.
-Not only that, our softftware also have:
+  Not only that, our softftware also have:
 + Basic data management functionalities are fulfilled, and all controlled by librarian for simple use.
 + There is error management with “try except” in most methods. For instance, if the book is already borrowed by someone, it would raise an error message when another person try to borrow it.
 + Dynamic SQL data tables are directly manipulated by Python methods.
