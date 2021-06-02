@@ -132,11 +132,48 @@ Those are all the function that our software have right now, but we will have an
 + Have beautiful design, a lot of function, easy to use. This will make you feel comfortable.
 + Have a nice customer service team who will listen to you whenever you need.
 
-### This is an UML/ Database diagram of our software
 
-![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture8.png)
 
-About our future plan
+# How do we made this software???
+This is an UML/ Database diagram of our software
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture18.png)
+We were starting to do this project about a month ago. At first, it was raw and very confused because none of us are master at this, however, that could not stop us. We were doing and learning at the same time. Maybe at first it was a mess but with our perseverance,  it become better and better. I admit that it is still not as good as other software, but I think, soon enough , our library management system will become a perfect system.
+
+## Modules
+About the modules of this program, we were not planning to separate it because we are running out of time. However, to help us in developing this software and we have an idea to make it.  We will separate it to four modules: Database, Imgs, Functions, main.py. And this is how it work: 
++ Database is a folder related to mysql database design.
++ Imgs include all images and icons we use in the program.
++ Functions which have all the button and their functions.
++ Main.py is the main file where you can use it to run the program.
+## Classes
+In our software right now, we have not using OOP because it will  took us a lot of time and we’re not used to it , but to let the software work smoothly , easier to develop, more relieable, more maintainable, and generally better, we will use OOP. 
+In this program, we are planning to use 13 classes, which is:
++ AddBooks.py
++ AddUser.py
++ DeleteBook.py
++ DeleteUser.py
++ LendBook.py
++ ReturnBook.py
++ UpdateBook.py
++ UpdateUser.py
++ ViewBook.py
++ ViewBorrowerByBookName.py
++ ViewBorrowerByName.py
++ ViewBorrowers.py
++ ViewUsers.py
++ main.py
+Although we already have it on our code, but it is not totally in OOP, so our plan is to change them into OOP.
+
+## Input and output 
+About the input and output, Our current program does not show directly the input and output, but in our next update, we will make it more clearly.
+In the update version, the input which is a “frame”, or we can call it a display window of specific function. It’s like in main, we have frame_main, view book is frame_view_books
+And output Is received from input and show out.
+
+This is our updating UI structure:
+
+
+
+## About our future plan
 This is our 1.0 version of the software with some basic function,  but it is enough for you to use as a librarian. Our promise is we will make it more magnificent, adding some more function such as:
 + Sorting the database with certain order.
 + Adding some information to the database :genres, date release books, …
@@ -144,3 +181,5 @@ This is our 1.0 version of the software with some basic function,  but it is eno
 + Making some unique function for some specific role in the library.
 + Having a log in system to distinguish administrative control from customer control.
 
+# Conclusion
+So, as you can see, this software is a “developing” one, so is not perfect. But, I promise, we will change this one into a useful, good-looking software and have more function in it.Maybe it’s not good right now, but I think this is a potential software.
