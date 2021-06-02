@@ -10,30 +10,33 @@
 +Help the librarian keep in touch with their “Customer”.
 +Saving time, energy
 # So What do the software do:
-
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture1.png)
 This is an interface of our software. You can always access to each function you need by click on the button. There are thirteen button on the interface, you can use them to access thirteen different function in the system which we will show you right now.
 First is books management , have four button. These four button will help you in managing available books, modifying book’s detail and adding new books. 
 1. View all book button.
 
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture2.png)
+
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture3.png)
                                                                                                 
 Here is the result after you click view all books, it wiil show you almost everything related to the book. Like Book ID, title of the book, author ID,  author name and numbers of copies of the book that your library have. This will help you to control every books that you have in your library, make it easy to find if the book is still there or not or if they want to find something specifically than you can easily find that one for them. Which can saving time for both you and the reader.
 2. Add book button:
 
-
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture4.png)
 
 When you click the “Add book” button it will appear this on the screen, it will let you add  to the database the book that did not appear in the library before. The book that you add will have the attribute like book ID, title, author ID, Author name and available copies.
 
 3. Delete a book 
 
 
-                                               
+ ![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture5.png)                                              
 
 This button will help you delete the book that already have in your library. As you all know, library develop frequently, so it is necessary to abandon some old, unpopular books and bring in some new, fresh popular one. 
 
 
 4. Update book
 
-
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture6.png)
 
 
 This update button  will help you to update available books in the database. Whenever you have changes in some kind of books,  feel free to click here to change.
@@ -41,19 +44,22 @@ This update button  will help you to update available books in the database. Whe
 The second part is user management. Also have 4 button. This part will help you in creating, modifying customer’s information in order to keep in touch with the user, give user information when have new book, remind user when they are overdue…
 5. show all users
 
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture7.png)
 
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture8.png)
 
 The “Show all users ” button will show you all of the user have already registered to the system. It will has  User ID, User Name, Date of birth,  phone number and e-mail. This function will provide the info of the customer for you to contact whenever you need.
 
 6. Add users
 
-
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture9.png)
 
 Whenever you have a new user, you will use this to fill in the information of him(her). You can see this information when you open show all users.
 
 7. Delete users:
 
 
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture10.png)
 
 
 
@@ -62,14 +68,14 @@ This Button will help you delete the user are not active. If you feel they are r
 
 8. Update Users
 
-
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture11.png)
 
 This function is useful when any of your customer want to change their detail maybe their name or phone or e-mail address.
 
 The last part is the borrow part. It need to be use very frequently because it have to be update when the user borrow any of the library’s books.
 9. Lend book
 
-
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture12.png)
 
 
 
@@ -78,16 +84,23 @@ After a user want to borrow a book, you can open this one. In this, you can prov
 
 10. Return book
 
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture13.png)
 
  When a user return their borrowed book to the library, you can use this to update latest information of the book.
 
 11. View all borrower
 
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture14.png)
+
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture15.png)
 
 This button will let you see all of the borrower who borrow book from you and which book they were borrowed. Not only that, you can also see the deadline of that book you, after that you can remind them by sending email or calling them.
 
 12. View borrower by name/book name
 
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture16.png)
+
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture17.png)
 
 You can insert the user name (in View borrowed by name) or book name ( in view borrowed by book name) to see all the related information.
 
@@ -103,6 +116,8 @@ Those are all the function that our software have right now, but we will have an
 + Have a nice customer service team who will listen to you whenever you need.
 
 ## This is an UML/ Database diagram of our software
+
+![alt text](https://github.com/vietanh2000april/G16-Python-LIMS/blob/main/picture/Picture8.png)
 
 About our future plan
 This is our 1.0 version of the software with some basic function,  but it is enough for you to use as a librarian. Our promise is we will make it more magnificent, adding some more function such as:
