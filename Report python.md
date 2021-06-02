@@ -126,7 +126,7 @@ Those are all the function that our software have right now, but we will have an
 
 ## Why choose our software???
 
-### There are a lot of reason that you must use my program:
+### There are mayny reasons that you must use our program:
 + We have a good and hard-working bug fixer.
 + Have a strong code writer who are always willing to improve the software.
 + Have beautiful design, a lot of function, easy to use. This will make you feel comfortable.
