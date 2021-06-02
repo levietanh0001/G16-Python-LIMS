@@ -1,7 +1,22 @@
 
 # Report Python
+## Topic: Library Management System
+### Members:
++ Lê Việt Anh
++ Vũ Tuấn Phương Nam
++ Đỗ Thành Đạt
++ Trần Bảo Huy
++ Nguyễn Tự Tùng
 
-## Intro about problem:
+
+
+
+
+
+
+
+
+## Introduction about the topic:
 
  From the past up till now, books are the most important things that can not be replaced. From a book, we can obtain many things like information, knowledge, … There are a lot of place we can find books. We can find books in the store, on the internet or in the library. , those are some place that contain a ton of book and you can find almost every thing here, especially some large library. But it’s not easy for you to find your favorite book in that “massive” numbers of books in the library , and it’s also not easy for the keepers(librarian) to keep tract of those books that you and your friends borrow. In this case, library management is the most important thing to deal  with the librarians. To meet the librarians need, we , the Try Hard team, introducing to you an app that we are working on it, which called The Library Management System.
 ### Some general information about the system:
